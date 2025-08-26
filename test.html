@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .calculator {
+      background: #5c4fc7;
+      color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      width: 700px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .slider-container {
+      margin: 20px 0;
+    }
+    input[type=range] {
+      width: 100%;
+    }
+    .value-box {
+      display: inline-block;
+      padding: 5px 15px;
+      background: #fff;
+      color: #000;
+      border-radius: 8px;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #fff;
+      color: #000;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .return {
+      margin-top: 10px;
+      padding: 6px;
+      border-radius: 20px;
+      background: #5c4fc7;
+      color: #fff;
+      font-size: 14px;
+    }
+    .full-width {
+      grid-column: span 2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <h2>How Wealth Management Works In Your Best Interest</h2>
+    <label>Monthly Investment</label>
+    <div class="slider-container">
+      <input type="range" id="investmentSlider" min="500" max="20000" step="500" value="1000">
+      <span class="value-box">₹ <span id="investmentValue">1000</span></span>
+    </div>
+    <p>After 25 years, it would have accumulated to 👉</p>
+
+    <div class="cards">
+      <div class="card">
+        <div id="bankValue">₹ 0</div>
+        Bank
+        <div class="return">@3% Return</div>
+      </div>
+      <div class="card">
+        <div id="fdValue">₹ 0</div>
+        Fixed Deposit
+        <div class="return">@7% Return</div>
+      </div>
+      <div class="card">
+        <div id="goldValue">₹ 0</div>
+        Gold
+        <div class="return">@9% Return</div>
+      </div>
+      <div class="card">
+        <div id="sensexValue">₹ 0</div>
+        Sensex
+        <div class="return">@11% Return</div>
+      </div>
+      <div class="card full-width">
+        <div id="mfValue">₹ 0</div>
+        Mutual Fund
+        <div class="return">@15% Return</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const slider = document.getElementById("investmentSlider");
+    const investmentValue = document.getElementById("investmentValue");
+
+    // Output elements
+    const bankValue = document.getElementById("bankValue");
+    const fdValue = document.getElementById("fdValue");
+    const goldValue = document.getElementById("goldValue");
+    const sensexValue = document.getElementById("sensexValue");
+    const mfValue = document.getElementById("mfValue");
+
+    // Compounding Formula: FV = P * [((1 + r/n)^(n*t) - 1) / (r/n)] * (1+r/n)
+    function futureValue(P, annualRate, years = 25, n = 12) {
+      let r = annualRate / 100;
+      return P * (((Math.pow(1 + r/n, n*years) - 1) / (r/n)) * (1 + r/n));
+    }
+
+    function updateValues() {
+      let monthlyInvestment = parseInt(slider.value);
+      investmentValue.textContent = monthlyInvestment;
+
+      // Calculate values for each option
+      bankValue.textContent = "₹ " + (futureValue(monthlyInvestment, 3) / 100000).toFixed(2) + "L";
+      fdValue.textContent = "₹ " + (futureValue(monthlyInvestment, 7) / 100000).toFixed(2) + "L";
+      goldValue.textContent = "₹ " + (futureValue(monthlyInvestment, 9) / 100000).toFixed(2) + "L";
+      sensexValue.textContent = "₹ " + (futureValue(monthlyInvestment, 11) / 100000).toFixed(2) + "L";
+      mfValue.textContent = "₹ " + (futureValue(monthlyInvestment, 15) / 100000).toFixed(2) + "L";
+    }
+
+    // Initial update
+    updateValues();
+
+    // Update on slider input
+    slider.addEventListener("input", updateValues);
+  </script>
+
+</body>
+</html>
