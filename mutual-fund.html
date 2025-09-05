@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutual Fund</title>
+
+        <link rel="icon" href="images/logo.png"> 
+    <link href="css/bootstrap.min.css" rel="stylesheet">                                <!-- Browser Tab Icon -->
+                       <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">                 <!-- Font-Awesome Icons -->
+    <!-- <link rel="stylesheet" href="css/icomoon.min.css">                      iconmoon Icons -->
+    <link rel="stylesheet" href="css/swiper.min.css">                       <!-- Carousel slider -->
+    <link rel="stylesheet" href="css/style.css">                            <!-- Template CSS -->
+    <link rel="stylesheet" href="css/animate.css">							<!-- Wow Animation CSS -->
+    <link rel="stylesheet" href="css/google-fonts.css">   
+  <style>
+    body {
+
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Hero Section */
+
+    .mf-hero {
+        text-align: center;
+      background: #953fff;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .mf-hero h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .mf-breadcrumb {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #e2d3ff;
+    }
+
+    /* About Section */
+    .mf-about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .mf-about img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .mf-about-content {
+      flex: 1;
+      background: #ece0ff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .mf-about-content h2 {
+      color: #953fff;
+      margin-bottom: 15px;
+    }
+
+    .mf-about-content p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .mf-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .mf-category-card {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mf-category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(149, 63, 255, 0.3);
+    }
+
+    .mf-category-card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .mf-category-card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #111;
+    }
+
+    .mf-category-card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .mf-highlight {
+      border: 2px solid #953fff;
+      background: #f3eaff;
+    }
+
+     .services-section {
+    background: #f9f9f9;
+    padding: 60px 20px;
+
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .services-header h2 {
+    font-size: 32px;
+    color: #953fff;
+    margin-bottom: 10px;
+  }
+
+  .services-header p {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .service-card h3 {
+    color: #953fff;
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  .service-card p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+  }
+    
+  </style>
+</head>
+<body>
+
+        <section class="site-holder" role="banner" style="margin-top: 100px;">
+
+        <!-- HEADER -->
+        <header class="site-header">
+
+            <!-- STICKY HEADER -->
+            <div class="sticky-header" id="sticky-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-3">
+
+                            <!-- LOGO -->
+                            <div class="site-logo">
+                                <a href='index.html'>
+                                    <img src="images/logo.png" alt="Logo">
+                                    
+                                </a>
+                            </div>
+                            <!-- END LOGO -->
+
+                        </div>
+                        <div class="col-xs-4 col-sm-9">
+
+                            <!-- NAVIGATION -->
+                            <nav class="site-nav" id="site-nav" role="navigation">
+                                <!-- MOBILE VIEW BUTTON -->
+                                <div class="nav-mobile">
+                                    <i class="fa fa-bars show"></i>
+                                    <i class="fa fa-close hide"></i>
+                                </div>
+                                <!-- LINKS -->
+                                <ul class="nav-off-canvas">
+                                    <!-- ACTIVE ITEM -->
+                                    <li class="active"><a href="#">Home</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">services</a></li>
+                                  
+                                    <li><a href="#">Calculators<i class="fa fa-angle-down"></i> </a>
+
+                                        <!-- SUB MENU -->
+                                        <ul class="site-sub-menu">
+                                        	<li><a href='swp01.html'>SIP/SWP Calculator</a></li>
+                                            <li><a href="#">Lumpsum With SIP</a></li>
+                                           
+                                        </ul>
+
+                                    </li>
+                                   
+                                    <li><a href="#">faq</a></li>
+                                    <li><a href="./contact.html">Contact us</a></li>
+                                    
+                                    
+                                </ul>
+                            </nav>
+                            <!-- END NAVIGATION -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+        <!-- END HEADER -->
+
+
+
+    </section>
+
+  <!-- Hero Section -->
+  <section class="mf-hero">
+    <h1>Mutual Fund</h1>
+    <div class="mf-breadcrumb">
+     Home / Mutual Fund
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="mf-about">
+    <img src="https://img.freepik.com/free-photo/plant-growing-jar-coins-with-mutual-fund-label_1150-19381.jpg" alt="Mutual Fund">
+    <div class="mf-about-content">
+      <h2>Why Mutual Funds with Ant Vault?</h2>
+      <p>Mutual funds are one of the most effective ways to grow wealth systematically. By pooling
+money from investors and investing across equities, debt, and hybrid asset classes, mutual
+funds provide diversification, professional management, and disciplined growth. Whether
+you are just starting your financial journey or securing your retirement, they remain one of the
+most trusted investment options.</p>
+      <p>At Ant Vault, we go beyond just distributing mutual funds. We analyze your goals, risk appetite,
+and time horizon to craft a portfolio that works specifically for you. With our NSE, AMFI, and
+IRDA certifications, coupled with decades of expertise, we ensure every rupee you invest is
+utilized efficiently and aligned with your long-term vision. Our advisory approach means you
+don’t just invest you invest smartly</p>
+      
+    </div>
+  </section>
+
+  <!-- Fund Categories -->
+  <section class="mf-categories">
+    <div class="mf-category-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" alt="Debt Funds">
+      <h3>Young Professionals</h3>
+      <p>Start early with SIPs and watch your small, consistent
+investments compound into significant wealth over time.</p>
+    </div>
+    
+    <div class="mf-category-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4228/4228703.png" alt="Equity Funds">
+      <h3>Growing Families</h3>
+      <p>Balance growth and stability with diversified funds that support
+education, home planning, and lifestyle aspirations.</p>
+    </div>
+    
+    <div class="mf-category-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/867/867644.png" alt="Hybrid Funds">
+      <h3>Mid-Career Individuals</h3>
+      <p>Focus on wealth acceleration with equity-oriented funds while
+safeguarding with debt allocation.
+</p>
+    </div>
+    
+    <div class="mf-category-card mf-highlight">
+      <img src="https://cdn-icons-png.flaticon.com/512/854/854894.png" alt="Solution Oriented Funds">
+      <h3>Retirees</h3>
+      <p>Secure steady income and capital preservation with low-risk funds designed
+for post-retirement comfort.
+</p>
+    </div>
+<!--     
+    <div class="mf-category-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135671.png" alt="Other Funds">
+      <h3>Other Funds</h3>
+      <p>Includes categories like Index Funds and ETFs, each targeting specific investment objectives.</p>
+    </div> -->
+
+
+  </section>
+
+
+  <section class="services-section">
+  <div class="services-header">
+    <h2 class="headline">Our Services</h2>
+    <p>Comprehensive solutions designed to grow, protect, and optimize your wealth.</p>
+  </div>
+
+  <div class="services-grid">
+    
+    <div class="service-card">
+      <h3>📊 Portfolio Management Services (PMS)</h3>
+      <p>Tailored for High Net-Worth Individuals (HNIs), our PMS delivers <strong>personalized investment strategies</strong> aligned with your goals, risk profile, and time horizon—ensuring transparency and focused wealth creation.</p>
+    </div>
+    
+    <div class="service-card">
+      <h3>📈 Equity & Exchange Traded Funds (ETFs)</h3>
+      <p>Invest in <strong>direct equities</strong> for ownership and long-term value, or choose <strong>ETFs</strong> for diversified, low-cost, and liquid exposure across multiple sectors—balancing growth with risk management.</p>
+    </div>
+    
+    <div class="service-card">
+      <h3>💰 Loan Against Mutual Funds</h3>
+      <p>Access <strong>instant liquidity</strong> without disturbing your investments. Leverage your mutual fund holdings as collateral to unlock funds while your wealth continues to grow.</p>
+    </div>
+    
+    <div class="service-card">
+      <h3>🛡️ National Pension System (NPS)</h3>
+      <p>A government-backed retirement savings plan offering <strong>market-linked growth</strong>, tax efficiency, and flexibility—helping you build a secure retirement corpus with disciplined contributions.</p>
+    </div>
+    
+    <div class="service-card">
+      <h3>⚕️ Insurance Solutions</h3>
+      <p>Protect what matters most with comprehensive <strong>life, health, and general insurance plans</strong>. Our solutions safeguard your family, assets, and future financial stability against uncertainties.</p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

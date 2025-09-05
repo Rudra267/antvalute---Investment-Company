@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutual Fund</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Hero Section */
+
+    .mf-hero {
+      background: #953fff;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .mf-hero h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .mf-breadcrumb {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #e2d3ff;
+    }
+
+    /* About Section */
+    .mf-about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .mf-about img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .mf-about-content {
+      flex: 1;
+      background: #ece0ff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .mf-about-content h2 {
+      color: #953fff;
+      margin-bottom: 15px;
+    }
+
+    .mf-about-content p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .mf-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .mf-category-card {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mf-category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(149, 63, 255, 0.3);
+    }
+
+    .mf-category-card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .mf-category-card h3 {
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .mf-category-card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .mf-highlight {
+      border: 2px solid #953fff;
+      background: #f3eaff;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="mf-hero">
+    <h1>Mutual Fund</h1>
+    <div class="mf-breadcrumb">
+      📍 Home / Products / Mutual Fund
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="mf-about">
+    <img src="https://img.freepik.com/free-photo/plant-growing-jar-coins-with-mutual-fund-label_1150-19381.jpg" alt="Mutual Fund">
+    <div class="mf-about-content">
+      <h2>Mutual Fund</h2>
+      <p>A mutual fund is a professionally managed investment fund that pools money from many investors to purchase securities. These investors may be retail or institutional in nature.</p>
+      <p>Mutual funds provide diversification, professional management, and liquidity. However, investors need to consider associated risks and expenses.</p>
+      <p>Primary structures of mutual funds include open-ended funds and closed-ended funds.</p>
+    </div>
+  </section>
+
+  <!-- Fund Categories -->
+  <section class="mf-categories">
+    <div class="mf-category-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" alt="Debt Funds">
+      <h3>Debt Funds</h3>
+      <p>A debt fund invests primarily in bonds or debt securities, focusing on income generation and capital preservation.</p>
+    </div>
+    
+    <div class="mf-category-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4228/4228703.png" alt="Equity Funds">
+      <h3>Equity Funds</h3>
+      <p>An equity mutual fund invests in equities and related securities, aiming for long-term capital appreciation.</p>
+    </div>
+    
+    <div class="mf-category-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/867/867644.png" alt="Hybrid Funds">
+      <h3>Hybrid Funds</h3>
+      <p>Hybrid funds invest in a mix of equities and fixed-income securities, balancing growth and stability.</p>
+    </div>
+    
+    <div class="mf-category-card mf-highlight">
+      <img src="https://cdn-icons-png.flaticon.com/512/854/854894.png" alt="Solution Oriented Funds">
+      <h3>Solution Oriented Funds</h3>
+      <p>Designed for specific financial goals like retirement or education, often with a lock-in period.</p>
+    </div>
+    
+    <div class="mf-category-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135671.png" alt="Other Funds">
+      <h3>Other Funds</h3>
+      <p>Includes categories like Index Funds and ETFs, each targeting specific investment objectives.</p>
+    </div>
+  </section>
+
+</body>
+</html>

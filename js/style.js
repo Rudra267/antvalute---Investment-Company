@@ -568,3 +568,47 @@ jQuery(document).ready(function ($) {
     Template_JS.twitter_feed();             // Call twitter feed function
 
 });
+
+
+
+window.addEventListener("scroll", () => {
+  const banner = document.getElementById("stickyBanner");
+  const triggerPoint = window.innerHeight; // 1 full screen height
+
+  if (window.scrollY >= triggerPoint) {
+    banner.style.display = "flex"; // show banner
+  } else {
+    banner.style.display = "none"; // hide on page 1
+  }
+});
+
+
+// faq
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      const header = item.querySelector(".faq-header");
+      const body = item.querySelector(".faq-body");
+      const icon = item.querySelector(".faq-icon");
+
+      header.addEventListener("click", () => {
+        // Close all
+        faqItems.forEach(i => {
+          i.querySelector(".faq-body").classList.remove("open");
+          i.querySelector(".faq-header").classList.remove("active");
+          i.querySelector(".faq-icon").textContent = "+";
+        });
+
+        // Open current
+        if (!body.classList.contains("open")) {
+          body.classList.add("open");
+          header.classList.add("active");
+          icon.textContent = "✗";
+        }
+      });
+    });
+  });
+

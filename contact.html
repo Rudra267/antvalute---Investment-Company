@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+      <link rel="icon" href="images/logo.png"> 
+    <link href="css/bootstrap.min.css" rel="stylesheet">                                <!-- Browser Tab Icon -->
+                       <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">                 <!-- Font-Awesome Icons -->
+    <!-- <link rel="stylesheet" href="css/icomoon.min.css">                      iconmoon Icons -->
+    <link rel="stylesheet" href="css/swiper.min.css">                       <!-- Carousel slider -->
+    <link rel="stylesheet" href="css/style.css">                            <!-- Template CSS -->
+    <link rel="stylesheet" href="css/animate.css">							<!-- Wow Animation CSS -->
+    <link rel="stylesheet" href="css/google-fonts.css">   
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Hero Section */
+    .contact-hero {
+      background: linear-gradient(135deg, #953fff, #7d2ae8);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .contact-hero h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .contact-hero p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #e6d9ff;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .contact-form, .contact-map {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+
+    .contact-form h2 {
+      color: #953fff;
+      margin-bottom: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .contact-form button {
+      background: #953fff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #7d2ae8;
+    }
+
+    /* Map */
+    .contact-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+      min-height: 400px;
+    }
+
+    /* Info Section */
+    .contact-info {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contact-info h3 {
+      color: #953fff;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+    <section class="site-holder" role="banner">
+
+        <!-- HEADER -->
+        <header class="site-header">
+
+            <!-- STICKY HEADER -->
+            <div class="sticky-header" id="sticky-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-3">
+
+                            <!-- LOGO -->
+                            <div class="site-logo">
+                                <a href='index.html'>
+                                    <img src="images/logo.png" alt="Logo">
+                                    
+                                </a>
+                            </div>
+                            <!-- END LOGO -->
+
+                        </div>
+                        <div class="col-xs-4 col-sm-9">
+
+                            <!-- NAVIGATION -->
+                            <nav class="site-nav" id="site-nav" role="navigation">
+                                <!-- MOBILE VIEW BUTTON -->
+                                <div class="nav-mobile">
+                                    <i class="fa fa-bars show"></i>
+                                    <i class="fa fa-close hide"></i>
+                                </div>
+                                <!-- LINKS -->
+                                <ul class="nav-off-canvas">
+                                    <!-- ACTIVE ITEM -->
+                                    <li ><a href="/">Home</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">services</a></li>
+                                  
+                                    <li><a href="#">Calculators<i class="fa fa-angle-down"></i> </a>
+
+                                        <!-- SUB MENU -->
+                                        <ul class="site-sub-menu">
+                                        	<li><a href='swp01.html'>SIP/SWP Calculator</a></li>
+                                            <li><a href="#">Lumpsum With SIP</a></li>
+                                           
+                                        </ul>
+
+                                    </li>
+                                   
+                                    <li><a href="#">faq</a></li>
+                                    <li><a class="active" href="./contact.html">Contact us</a></li>
+                                    
+                                    
+                                </ul>
+                            </nav>
+                            <!-- END NAVIGATION -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+        <!-- END HEADER -->
+
+
+
+    </section>
+
+  <!-- Hero -->
+  <section class="contact-hero" style="margin-top: 100px;">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you. Reach out today!</p>
+  </section>
+
+  <!-- Contact + Map -->
+  <section class="contact-section">
+    
+    <!-- Form -->
+    <div class="contact-form">
+      <h2 class="headline">Get In Touch</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Map -->
+    <div class="contact-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.092437766418!2d-122.41941558468345!3d37.77492977975937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5e91f3f3%3A0x807c5f2e5c5f4a17!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sus!4v1693827364573!5m2!1sen!2sus" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </section>
+
+  <!-- Contact Info -->
+  <section class="contact-info">
+    <h3>Our Office</h3>
+    <p>📍 123 Business Street, San Francisco, CA 94103</p>
+    <p>📞 +1 (123) 456-7890</p>
+    <p>✉️ info@company.com</p>
+  </section>
+
+</body>
+</html>
