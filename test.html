@@ -3,171 +3,223 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mutual Fund</title>
+  <title>Goals & Principles | Ant Vault</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
-      background: #f9f9f9;
+      background: #fafafa;
       color: #333;
     }
 
-    /* Hero Section */
-
-    .mf-hero {
-      background: #953fff;
-      color: white;
-      padding: 40px 20px;
-    }
-
-    .mf-hero h1 {
-      margin: 0;
+    h2 {
       font-size: 32px;
-      font-weight: bold;
+      color: #6730fd;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
     }
 
-    .mf-breadcrumb {
-      margin-top: 10px;
-      font-size: 14px;
-      color: #e2d3ff;
+    h2::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background: #6730fd;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
     }
 
-    /* About Section */
-    .mf-about {
+    /* Goals Section */
+    .goals-section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .goals-flex {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .goal-item {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 20px;
-      flex-wrap: wrap;
-    }
-
-    .mf-about img {
-      width: 100%;
-      max-width: 500px;
+      gap: 20px;
+      padding: 15px;
+      background: #f4f1ff;
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      animation: slideIn 1s ease forwards;
     }
 
-    .mf-about-content {
-      flex: 1;
-      background: #ece0ff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    }
-
-    .mf-about-content h2 {
-      color: #953fff;
-      margin-bottom: 15px;
-    }
-
-    .mf-about-content p {
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-
-    .mf-categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 20px;
-    }
-
-    .mf-category-card {
-      background: white;
-      padding: 20px;
-      text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .mf-category-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(149, 63, 255, 0.3);
-    }
-
-    .mf-category-card img {
+    .goal-item img {
       width: 60px;
+      height: 60px;
+    }
+
+    .goal-item h3 {
+      margin: 0 0 5px;
+      color: #6730fd;
+    }
+
+    /* Principles Section */
+    .principles-section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .principles-timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .principle {
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .principle img {
+      width: 70px;
       margin-bottom: 15px;
     }
 
-    .mf-category-card h3 {
-      margin-bottom: 10px;
-      color: #111;
+    .principle h4 {
+      margin: 0 0 10px;
+      color: #6730fd;
     }
 
-    .mf-category-card p {
+    .principle p {
       font-size: 14px;
       color: #555;
-      line-height: 1.6;
     }
 
-    .mf-highlight {
-      border: 2px solid #953fff;
-      background: #f3eaff;
+    /* Animations */
+    @keyframes slideIn {
+      from {transform: translateX(-50px); opacity: 0;}
+      to {transform: translateX(0); opacity: 1;}
     }
-    
+
+    .principle.fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="mf-hero">
-    <h1>Mutual Fund</h1>
-    <div class="mf-breadcrumb">
-      📍 Home / Products / Mutual Fund
+  <!-- Goals Section -->
+  <section class="goals-section">
+    <h2>🏆 Our Goals</h2>
+    <div class="goals-flex">
+
+      <div class="goal-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Wealth">
+        <div>
+          <h3>Wealth Creation</h3>
+          <p>Build long-term wealth through systematic investment strategies.</p>
+        </div>
+      </div>
+
+      <div class="goal-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135679.png" alt="Literacy">
+        <div>
+          <h3>Financial Literacy</h3>
+          <p>Educating clients about savings, mutual funds, and financial planning.</p>
+        </div>
+      </div>
+
+      <div class="goal-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="Customer">
+        <div>
+          <h3>Customer-Centric</h3>
+          <p>Personalized advisory aligned with each client’s unique goals.</p>
+        </div>
+      </div>
+
+      <div class="goal-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/2422/2422679.png" alt="Growth">
+        <div>
+          <h3>Sustainable Growth</h3>
+          <p>Consistent returns with risk-managed strategies.</p>
+        </div>
+      </div>
+
+      <div class="goal-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/3069/3069173.png" alt="Legacy">
+        <div>
+          <h3>Legacy Building</h3>
+          <p>Creating intergenerational wealth that secures family futures.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="mf-about">
-    <img src="https://img.freepik.com/free-photo/plant-growing-jar-coins-with-mutual-fund-label_1150-19381.jpg" alt="Mutual Fund">
-    <div class="mf-about-content">
-      <h2>Mutual Fund</h2>
-      <p>A mutual fund is a professionally managed investment fund that pools money from many investors to purchase securities. These investors may be retail or institutional in nature.</p>
-      <p>Mutual funds provide diversification, professional management, and liquidity. However, investors need to consider associated risks and expenses.</p>
-      <p>Primary structures of mutual funds include open-ended funds and closed-ended funds.</p>
+  <!-- Principles Section -->
+  <section class="principles-section">
+    <h2>🔑 Ant Principles Behind Ant Vault</h2>
+    <div class="principles-timeline">
+
+      <div class="principle fade-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/1029/1029183.png" alt="Future">
+        <h4>Future-Ready</h4>
+        <p>Invest today to secure tomorrow.</p>
+      </div>
+
+      <div class="principle fade-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/1087/1087815.png" alt="Teamwork">
+        <h4>Teamwork</h4>
+        <p>Collective strength through mutual funds.</p>
+      </div>
+
+      <div class="principle fade-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Discipline">
+        <h4>Discipline</h4>
+        <p>Step-by-step wealth creation via SIPs.</p>
+      </div>
+
+      <div class="principle fade-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/3771/3771335.png" alt="Strength">
+        <h4>Strength Beyond Size</h4>
+        <p>Small savings grow into mammoth wealth.</p>
+      </div>
+
+      <div class="principle fade-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135670.png" alt="Resourcefulness">
+        <h4>Resourcefulness</h4>
+        <p>Every rupee is put to its best use.</p>
+      </div>
+
+      <div class="principle fade-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/4237/4237944.png" alt="Persistence">
+        <h4>Persistence</h4>
+        <p>Resilient strategies that adapt to market changes.</p>
+      </div>
+
     </div>
   </section>
 
-  <!-- Fund Categories -->
-  <section class="mf-categories">
-    <div class="mf-category-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" alt="Debt Funds">
-      <h3>Debt Funds</h3>
-      <p>A debt fund invests primarily in bonds or debt securities, focusing on income generation and capital preservation.</p>
-    </div>
-    
-    <div class="mf-category-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/4228/4228703.png" alt="Equity Funds">
-      <h3>Equity Funds</h3>
-      <p>An equity mutual fund invests in equities and related securities, aiming for long-term capital appreciation.</p>
-    </div>
-    
-    <div class="mf-category-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/867/867644.png" alt="Hybrid Funds">
-      <h3>Hybrid Funds</h3>
-      <p>Hybrid funds invest in a mix of equities and fixed-income securities, balancing growth and stability.</p>
-    </div>
-    
-    <div class="mf-category-card mf-highlight">
-      <img src="https://cdn-icons-png.flaticon.com/512/854/854894.png" alt="Solution Oriented Funds">
-      <h3>Solution Oriented Funds</h3>
-      <p>Designed for specific financial goals like retirement or education, often with a lock-in period.</p>
-    </div>
-    
-    <div class="mf-category-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135671.png" alt="Other Funds">
-      <h3>Other Funds</h3>
-      <p>Includes categories like Index Funds and ETFs, each targeting specific investment objectives.</p>
-    </div>
-  </section>
+  <script>
+    // Fade-in animation for principles on scroll
+    const principles = document.querySelectorAll('.principle');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    principles.forEach(principle => {
+      observer.observe(principle);
+    });
+  </script>
 
 </body>
 </html>
