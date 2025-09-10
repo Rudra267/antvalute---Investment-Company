@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance</title>
+
+  <link rel="icon" href="images/logo.png"> 
+  <link href="css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/google-fonts.css">
+
+  <style>
+    body { margin: 0; background: #f9f9f9; color: #333; }
+
+    /* Hero Section */
+    .mf-hero {
+      text-align: center;
+      background: #953fff;
+      color: white;
+      padding: 40px 20px;
+    }
+    .mf-hero h1 { margin: 0; font-size: 32px; font-weight: bold; }
+    .mf-breadcrumb { margin-top: 10px; font-size: 14px; color: #e2d3ff; }
+
+    /* About Section */
+    .mf-about { display: flex; align-items: center; justify-content: center; gap: 30px; max-width: 1200px; margin: 50px auto; padding: 20px; flex-wrap: wrap; }
+    .mf-about img { width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    .mf-about-content { flex: 1; background: #ece0ff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
+    .mf-about-content h2 { color: #953fff; margin-bottom: 15px; }
+    .mf-about-content p { margin-bottom: 10px; line-height: 1.6; }
+
+    /* Categories Grid */
+    .mf-categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; max-width: 1200px; margin: 50px auto; padding: 20px; }
+    .mf-category-card { background: white; padding: 20px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .mf-category-card:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(149, 63, 255, 0.3); }
+    .mf-category-card img { width: 60px; margin-bottom: 15px; }
+    .mf-category-card h3 { margin-bottom: 10px; font-size: 20px; color: #111; }
+    .mf-category-card p { font-size: 14px; color: #555; line-height: 1.6; }
+
+    /* Section Headers */
+    .services-section { background: #f9f9f9; padding: 60px 20px; }
+    .services-header { text-align: center; margin-bottom: 40px; }
+    .services-header h2 { font-size: 32px; color: #953fff; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="mf-hero">
+    <h1>Insurance</h1>
+    <div class="mf-breadcrumb">Home / Insurance</div>
+  </section>
+
+  <!-- About Insurance -->
+  <section class="mf-about">
+    <img src="https://img.freepik.com/free-photo/family-protection-healthcare-insurance-concept_53876-127774.jpg" alt="Insurance">
+    <div class="mf-about-content">
+      <h2>Insurance – Protecting Today, Securing Tomorrow</h2>
+      <p>Wealth is built over time, but one unforeseen event can undo years of effort. That’s why protection is the foundation of financial planning. At Ant Vault, we ensure that while your investments grow, your family’s security is never compromised. Our life and health insurance solutions are designed to safeguard your loved ones, cover uncertainties, and provide peace of mind — today and tomorrow.</p>
+    </div>
+  </section>
+
+  <!-- Life Insurance -->
+  <section class="services-section">
+    <div class="services-header">
+      <h2>🛡 Life Insurance – A Promise That Lives On</h2>
+    </div>
+    <section class="mf-categories">
+      <div class="mf-category-card">
+        <img src="./icons/term.png" alt="Term Plans">
+        <h3>Term Plans</h3>
+        <p>Maximum protection at minimal cost. Affordable premiums with high coverage, ideal for securing large liabilities like loans and lifestyle expenses.</p>
+      </div>
+      <div class="mf-category-card">
+        <img src="./icons/endowment.png" alt="Endowment Plans">
+        <h3>Endowment Plans</h3>
+        <p>Blend of life cover and guaranteed maturity benefits. Perfect for medium-to-long-term goals like weddings, education, or legacy building.</p>
+      </div>
+      <div class="mf-category-card">
+        <img src="./icons/ulip.png" alt="ULIP">
+        <h3>ULIPs</h3>
+        <p>Combines insurance with investments. Switch between equity, debt, or balanced funds while ensuring long-term financial security.</p>
+      </div>
+      <div class="mf-category-card">
+        <img src="./icons/pension.png" alt="Retirement">
+        <h3>Retirement & Pension Plans</h3>
+        <p>Ensures a steady income post-retirement, protecting against inflation while maintaining independence and dignity in golden years.</p>
+      </div>
+    </section>
+  </section>
+
+  <!-- Health Insurance -->
+  <section class="services-section">
+    <div class="services-header">
+      <h2>🏥 Health Insurance – Guarding Against Rising Healthcare Costs</h2>
+    </div>
+    <section class="mf-categories">
+      <div class="mf-category-card">
+        <img src="./icons/individual.png" alt="Individual">
+        <h3>Individual Health Plans</h3>
+        <p>Focused protection for individuals with coverage for hospitalization, surgeries, and medical needs. Affordable and effective.</p>
+      </div>
+      <div class="mf-category-card">
+        <img src="./icons/family.png" alt="Family">
+        <h3>Family Floater Plans</h3>
+        <p>One umbrella policy for the entire family. Cost-effective, flexible, and convenient.</p>
+      </div>
+      <div class="mf-category-card">
+        <img src="./icons/critical.png" alt="Critical Illness">
+        <h3>Critical Illness Plans</h3>
+        <p>Lump sum payout on diagnosis of critical illnesses like cancer or heart disease. Acts as a cushion beyond standard insurance.</p>
+      </div>
+      <div class="mf-category-card">
+        <img src="./icons/topup.png" alt="Top Up">
+        <h3>Top-Up & Super Top-Up</h3>
+        <p>Boosts your existing coverage once base coverage is exhausted. A cost-effective way to handle rising healthcare costs.</p>
+      </div>
+    </section>
+  </section>
+
+  <!-- Why Insurance with Ant Vault -->
+  <section class="services-section">
+    <div class="services-header">
+      <h2>🌟 Why Choose Insurance with Ant Vault?</h2>
+    </div>
+    <section class="mf-categories">
+      <div class="mf-category-card">
+        <img src="./icons/future.png" alt="Future Ready">
+        <h3>Future-Ready Protection</h3>
+        <p>Plans designed to grow with your life goals.</p>
+      </div>
+      <div class="mf-category-card">
+        <img src="./icons/expert.png" alt="Expert">
+        <h3>Expert Guidance</h3>
+        <p>Certified advisors ensuring the right cover, not just any cover.</p>
+      </div>
+      <div class="mf-category-card">
+        <img src="./icons/trust.png" alt="Trusted">
+        <h3>Trusted Partnerships</h3>
+        <p>Access to India’s leading insurers with vast networks.</p>
+      </div>
+      <div class="mf-category-card">
+        <img src="./icons/integrated.png" alt="Integrated">
+        <h3>Integrated Wealth Planning</h3>
+        <p>Insurance that complements your investments to secure wealth.</p>
+      </div>
+    </section>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="mf-about">
+    <img src="https://img.freepik.com/free-photo/hand-holding-umbrella-protecting-family-health-insurance-concept_53876-138142.jpg" alt="Philosophy">
+    <div class="mf-about-content">
+      <h2>🔐 Ant Vault’s Insurance Philosophy</h2>
+      <p><b>Protect → Save → Grow</b></p>
+      <p>We believe financial freedom is complete only when protection and growth go hand in hand. With insurance as your foundation and investments as your growth engine, you’re not just planning wealth — you’re planning peace, security, and legacy.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <img width="160px" src="./logo.jpeg" alt="">
+        <p>Tiny Beginnings. Mammoth Outcomes.</p>
+        <p class="footer-tagline">Building wealth with trust, discipline & foresight.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 123 Business Street, Hyderabad, India</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ info@antvault.com</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#"><img src="./icons/facebook-app-symbol.png" alt="Facebook"></a>
+          <a href="#"><img src="./icons/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="./icons/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="./icons/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Ant Vault. All Rights Reserved.</p>
+      <a href="https://www.vgswebservices.com/"><p>Designed by Virtuous Global Solutions</p></a>
+    </div>
+  </footer>
+
+</body>
+</html>
