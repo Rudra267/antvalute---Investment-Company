@@ -5362,6 +5362,11 @@ y-axis */
     display: flex;
     justify-content: space-between;
   }
- .custom-img{
-    
+ @media (max-width:800px){
+.calculator{
+  width: 100%;
+}
+.mob-text{
+  font-size: 25px !important;
+}
  }
