@@ -18,7 +18,7 @@
 
     .mf-hero {
       text-align: center;
-      background: #953fff;
+      background: #6A13DB;
       color: white;
       padding: 40px 20px;
     }
@@ -28,7 +28,7 @@
     .mf-about { display: flex; align-items: center; justify-content: center; gap: 30px; max-width: 1200px; margin: 50px auto; padding: 20px; flex-wrap: wrap; }
     .mf-about img { width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
     .mf-about-content { flex: 1; background: #ece0ff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
-    .mf-about-content h2 { color: #953fff; margin-bottom: 15px; }
+    .mf-about-content h2 { color: #6A13DB; margin-bottom: 15px; }
     .mf-about-content p { margin-bottom: 10px; line-height: 1.6; }
 
     .mf-categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; max-width: 1200px; margin: 50px auto; padding: 20px; }
@@ -40,10 +40,79 @@
 
     .services-section { background: #f9f9f9; padding: 60px 20px; }
     .services-header { text-align: center; margin-bottom: 40px; }
-    .services-header h2 { font-size: 32px; color: #953fff; margin-bottom: 10px; }
+    .services-header h2 { font-size: 32px; color: #6A13DB; margin-bottom: 10px; }
   </style>
 </head>
 <body>
+
+      <section class="site-holder" role="banner" style="margin-top: 100px;">
+
+        <!-- HEADER -->
+        <header class="site-header">
+
+            <!-- STICKY HEADER -->
+            <div class="sticky-header" id="sticky-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-3">
+
+                            <!-- LOGO -->
+                            <div class="site-logo">
+                                <a href='index.html'>
+                                    <img src="images/logo.png" alt="Logo">
+                                    
+                                </a>
+                            </div>
+                            <!-- END LOGO -->
+
+                        </div>
+                        <div class="col-xs-4 col-sm-9">
+
+                            <!-- NAVIGATION -->
+                            <nav class="site-nav" id="site-nav" role="navigation">
+                                <!-- MOBILE VIEW BUTTON -->
+                                <div class="nav-mobile">
+                                    <i class="fa fa-bars show"></i>
+                                    <i class="fa fa-close hide"></i>
+                                </div>
+                                <!-- LINKS -->
+                                <ul class="nav-off-canvas">
+                                    <!-- ACTIVE ITEM -->
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="./about.html">About Us</a></li>
+                                    <li class="active"><a href="#">services</a></li>
+                                  
+                                    <li><a href="#">Calculators<i class="fa fa-angle-down"></i> </a>
+
+                                        <!-- SUB MENU -->
+                                        <ul class="site-sub-menu">
+                                        	<li><a href='swp01.html'>SIP/SWP Calculator</a></li>
+                                            <li><a href="#">Lumpsum With SIP</a></li>
+                                           
+                                        </ul>
+
+                                    </li>
+                                   
+                                    <li><a href="./faq.html">faq</a></li>
+                                    <li><a href="./contact.html">Contact us</a></li>
+                                    
+                                    
+                                </ul>
+                            </nav>
+                            <!-- END NAVIGATION -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+        <!-- END HEADER -->
+
+
+
+    </section>
 
   <!-- Hero Section -->
   <section class="mf-hero">
@@ -53,7 +122,7 @@
 
   <!-- About NPS -->
   <section class="mf-about">
-    <img src="https://img.freepik.com/free-photo/retirement-saving-concept_53876-123798.jpg" alt="NPS">
+    <img src="https://images.unsplash.com/photo-1644667589467-232fce410785?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="NPS">
     <div class="mf-about-content">
       <h2>What is NPS?</h2>
       <p>The National Pension System (NPS) is a government-backed retirement savings scheme designed to help individuals build a secure financial future. By investing systematically during your working years, NPS creates a corpus for post-retirement income, ensuring stability and peace of mind.</p>
@@ -68,7 +137,7 @@
     </div>
     <section class="mf-categories">
       <div class="mf-category-card">
-        <img src="./icons/wealth.png" alt="Wealth">
+        <img src="./icons/savings-ratio.png" alt="Wealth">
         <h3>Disciplined Wealth Creation</h3>
         <p>Encourages long-term savings for retirement with a structured approach.</p>
       </div>
@@ -78,17 +147,17 @@
         <p>Choose asset allocation between equities, corporate debt, and government securities.</p>
       </div>
       <div class="mf-category-card">
-        <img src="./icons/team.png" alt="Professional Management">
+        <img src="./icons/meeting.png" alt="Professional Management">
         <h3>Professional Fund Management</h3>
         <p>Managed by top pension fund managers regulated by PFRDA.</p>
       </div>
       <div class="mf-category-card">
-        <img src="./icons/tax.png" alt="Tax">
+        <img src="./icons/money.png" alt="Tax">
         <h3>Tax Efficiency</h3>
         <p>Enjoy additional tax benefits under Section 80CCD(1B), beyond Section 80C.</p>
       </div>
       <div class="mf-category-card">
-        <img src="./icons/dual.png" alt="Dual Benefit">
+        <img src="./icons/operator.png" alt="Dual Benefit">
         <h3>Dual Benefit</h3>
         <p>Build a retirement corpus and secure lifelong pension via annuity.</p>
       </div>
@@ -156,44 +225,55 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-col">
-        <img width="160px" src="./logo.jpeg" alt="">
-        <p>Tiny Beginnings. Mammoth Outcomes.</p>
-        <p class="footer-tagline">Building wealth with trust, discipline & foresight.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="./about.html">About Us</a></li>
-          <li><a href="./services.html">Services</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>📍 123 Business Street, Hyderabad, India</p>
-        <p>📞 +91 98765 43210</p>
-        <p>✉️ info@antvault.com</p>
-      </div>
-      <div class="footer-col">
-        <h4>Follow Us</h4>
-        <div class="social-links">
-          <a href="#"><img src="./icons/facebook-app-symbol.png" alt="Facebook"></a>
-          <a href="#"><img src="./icons/twitter.png" alt="Twitter"></a>
-          <a href="#"><img src="./icons/instagram.png" alt="Instagram"></a>
-          <a href="#"><img src="./icons/linkedin.png" alt="LinkedIn"></a>
-        </div>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <img width="160px" src="./logo.jpeg" alt="">
+      <p>Tiny Beginnings. Mammoth Outcomes.</p>
+      <p class="footer-tagline">Building wealth with trust, discipline & foresight.</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>📍 123 Business Street, Hyderabad, India</p>
+      <p>📞 +91 98765 43210</p>
+      <p>✉️ info@antvault.com</p>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#"><img src="./icons/facebook-app-symbol.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+        <a href="#"><img src="./icons/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="./icons/linkedin.png" alt="linkedin"></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 Ant Vault. All Rights Reserved.</p>
-      <a href="https://www.vgswebservices.com/"><p>Designed by Virtuous Global Solutions</p></a>
-    </div>
-  </footer>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Ant Vault. All Rights Reserved.</p>
+    <a href="https://www.vgswebservices.com/"><p>Designed by Virtuous Global Solutions</p></a>
+    
+  </div>
+</footer>
 
 </body>
 </html>
